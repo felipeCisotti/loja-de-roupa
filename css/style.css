@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+.container-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* alinha verticalmente */
+    font-family: "Roboto Mono", monospace;
+    padding: 20px;
+    background-color: black;
+    color: white;
+
+}
+
+.nav ul {
+    display: flex;
+    /* transforma a lista em flex container */
+    gap: 20px;
+    /* espaçamento entre os itens */
+    list-style: none;
+    /* remove as bolinhas da lista */
+    padding: 0;
+    /* remove padding padrão */
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    padding: 10px;
+}
+
+.bottom li {
+    list-style: none;
+}
+
+.bottom li a {
+    text-decoration: none;
+    color: black;
+}
+
+.bottom a:hover {
+    text-decoration: underline black;
+}
+
+.marcas {
+    text-align: center;
+    margin-top: 90px;
+    font-size: large;
+}
+
+
+.marcas img {
+    width: 200px;
+}
+
+#marcas {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.marcas img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    z-index: 1;
+    transition: all .5s ease;
+}
+
+.produtos {
+    text-align: center;
+    margin-top: 90px;
+    font-size: large;
+}
+
+.produtos img {
+    width: 150px;
+}
+
+#produtos {
+    display: flex;
+    justify-content: space-around;
+}
+
+.produtos img:hover {
+    transform: scale(1.05);
+    z-index: 1;
+    transition: all .5s ease;
+}
+
+
+.maisvistos .container {
+    margin-top: 30px;
+    display: flex;
+    /* Ativa o flexbox */
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.maisvistos .card {
+    flex: 0 0 auto;
+    /* Impede que os cards estiquem ou encolham */
+    margin-bottom: 16px;
+    /* Espaçamento inferior opcional */
+}
+
+.form {
+    margin-top: 120px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.form legend {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    align-items: end;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form label {
+    font-size: 0.9rem;
+    color: #000000;
+    margin-bottom: 0.5rem;
+}
+
+.form input,
+.form select {
+    padding: 0.8rem;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form input:focus,
+.form select:focus {
+    outline: none;
+    border-color: #000000;
+}
+
+.form button {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form button:hover {
+    transform: translateY(-2px);
+}
+
+.card {
+    width: 250px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-content h3 {
+    font-size: 16px;
+    margin: 0 0 8px;
+    color: #333;
+}
+
+.frete {
+    color: #00b383;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #111;
+}
+
+.installments {
+    font-size: 14px;
+    color: #555;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all .5s ease;
+}
+
+.tenis img {
+    width: 1400px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+    margin-top: 90px;
+}
+
+.tenis img:hover {
+    transform: scale(1.05);
+    z-index: 1;
+    transition: all .3s ease;
+}
+
+.tenismaisvisto .container {
+    margin-top: 35px;
+    display: flex;
+    /* Ativa o flexbox */
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.tenismaisvisto .card {
+    flex: 0 0 auto;
+    /* Impede que os cards estiquem ou encolham */
+    margin-bottom: 16px;
+    /* Espaçamento inferior opcional */
+}
+
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .container-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+}
+
+
