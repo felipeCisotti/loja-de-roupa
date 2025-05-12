@@ -23,10 +23,51 @@
     /* remove padding padrão */
 }
 
-.nav ul li a {
+
+
+.link {
     text-decoration: none;
     color: white;
 }
+
+/* From Uiverse.io by WhiteNervosa */
+.link {
+    color: white;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+.link:focus,
+.link:hover {
+    color: #fff;
+}
+
+.link:focus:after,
+.link:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+.link:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
 
 .bottom {
     display: flex;
@@ -61,7 +102,7 @@
 
 #marcas {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .marcas img:hover {
@@ -189,6 +230,20 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.card:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+    cursor: pointer;
+    transform: scale(1.05);
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all .5s ease;
+}
+
+.card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+}
+
 .card img {
     width: 100%;
     height: auto;
@@ -221,13 +276,6 @@
 .installments {
     font-size: 14px;
     color: #555;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    z-index: 1;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transition: all .5s ease;
 }
 
 .tenis img {
@@ -285,6 +333,55 @@
     }
 }
 
-.botoes{
+/* From Uiverse.io by alexmaracinaru */
+.cta {
+    border: none;
     margin-top: 20px;
+    background: none;
+    cursor: pointer;
+}
+
+.cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+}
+
+.cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active svg {
+    transform: scale(0.9);
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
