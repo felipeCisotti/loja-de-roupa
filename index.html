@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="/css/style.css">
     <Script src="script.js"></Script>
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
@@ -60,27 +61,27 @@
         </section>
 
         <section class="marcas" id="marcas1">
-            <h4>AS MELHORES MARCAS VOCÊ ENCONTRA AQUI</h4>
+            <h4 data-aos="fade-up">AS MELHORES MARCAS VOCÊ ENCONTRA AQUI</h4>
             </br>
             <div class="container" id="marcas">
                 <div class="slider autoplay"></div>
                 <div class="box">
-                    <img src="/marcas/balenciaga.png" alt="">
+                    <img src="/marcas/balenciaga.png" alt="" data-aos="fade-up" data-aos-duration="2000">
                 </div>
                 <div class="box">
-                    <img src="/marcas/louis.png" alt="">
+                    <img src="/marcas/louis.png" alt=""  data-aos="fade-up" data-aos-duration="2400">
                 </div>
                 <div class="box">
-                    <img src="/marcas/ralph.png" alt="">
+                    <img src="/marcas/ralph.png" alt=""  data-aos="fade-up" data-aos-duration="2600">
                 </div>
                 <div class="box">
-                    <img src="/marcas/tommy.png" alt="">
+                    <img src="/marcas/tommy.png" alt=""  data-aos="fade-up" data-aos-duration="2800">
                 </div>
             </div>
             </div>
         </section>
 
-        <section class="maisvistos" id="maisvistos">
+        <section class="maisvistos" id="maisvistos" data-aos="fade-right">
             <h4 style="text-align: center; margin-top: 120px;">MAIS VISTOS</h4>
             <div class="container">
                 <div class="card">
@@ -164,11 +165,11 @@
             </div>
         </section>
 
-        <section class="tenis">
-            <img src="/css/banner tenis.png" alt="">
+        <section class="tenis" data-aos="fade-left">
+            <img src="/css/banner tenis.png" alt="" >
         </section>
 
-        <section class="tenismaisvisto">
+        <section class="tenismaisvisto" data-aos="fade-right">
             <h4 style="text-align: center; margin-top: 120px;">TENDENCIAS</h4>
             <div class="container">
                 <div class="card">
@@ -249,7 +250,7 @@
 
 
         </section>
-        <section class="form">
+        <section class="form" data-aos="fade-up">
             <form>
                 <fieldset>
                     <legend>Gostaria de receber promoções e novidades?</legend>
@@ -271,7 +272,7 @@
             </form>
         </section>
     </main>
-    <footer class="py-3 my-4">
+    <footer class="py-3 my-4" data-aos="fade-up">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
             <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Inicio</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Produtos</a></li>
@@ -285,6 +286,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
+
+        <script>
+  AOS.init();
+</script>
 </body>
 
 </html>
